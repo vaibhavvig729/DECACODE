@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#145c45">
+    <title>
+      Finora — Support, money tools, and livelihood guidance in one place
+    </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home">
+        <img class="brand-logo" src="finora-logo.svg" alt="">
+        <span>
+          Finora
+          <small data-i18n="tagline">
+            Support, money tools, and livelihood guidance in one place
+          </small>
+        </span>
+      </a>
+      <nav>
+        <a href="#schemes" data-i18n="navSchemes">
+          Schemes
+        </a>
+        <a href="#money" data-i18n="navMoney">
+          Money tools
+        </a>
+        <a href="#business" data-i18n="navBusiness">
+          My business
+        </a>
+      </nav>
+      <label class="language-picker" for="language" title="Choose language">
+        <span class="language-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
+        </span>
+        <select id="language" aria-label="Choose language">
+          <option value="" disabled selected>Choose language</option>
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+          <option value="kn">ಕನ್ನಡ</option>
+        </select>
+      </label>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="welcome">
+            A simpler way forward
+          </span>
+          <h1 data-i18n="heroTitle">
+            Support for your work.
+            <br>
+            <em>
+              Clarity for your money.
+            </em>
+          </h1>
+          <p data-i18n="heroText">
+            Explore support schemes, understand your transactions, and keep your livelihood moving — all in one place.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#schemes" data-i18n="findSchemes">
+              Find schemes
+            </a>
+            <a class="btn light" href="#money" data-i18n="reviewMoney">
+              Review my money
+            </a>
+          </div>
+          <p class="quiet">
+            🔒
+            <span data-i18n="privacyLine">
+              Your records stay in this browser. No bank or UPI connection.
+            </span>
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span>
+              ✦
+            </span>
+            <span data-i18n="todaySnapshot">
+              Your workspace
+            </span>
+            <span class="status-dot">
+            </span>
+          </div>
+          <div class="metric-row">
+            <div>
+              <small data-i18n="cashFlow">
+                Cash flow
+              </small>
+              <strong id="heroFlow">
+                ₹0
+              </strong>
+            </div>
+            <div class="metric-icon">
+              ↗
+            </div>
+          </div>
+          <div class="mini-bars">
+            <i style="height:36%">
+            </i>
+            <i style="height:59%">
+            </i>
+            <i style="height:44%">
+            </i>
+            <i style="height:82%">
+            </i>
+            <i style="height:63%">
+            </i>
+            <i style="height:100%">
+            </i>
+            <i style="height:72%">
+            </i>
+          </div>
+          <div class="hero-note">
+            <span>
+              🌱
+            </span>
+            <span data-i18n="workspaceNote">
+              Start with a demo or add your own records.
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="schemes">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow" data-i18n="supportTools">
+              SUPPORT & READINESS
+            </span>
+            <h2 data-i18n="schemeTitle">
+              Find support that fits your work
+            </h2>
+            <p data-i18n="schemeIntro">
+              Explore starter scheme matches and make a personal document checklist.
+            </p>
+          </div>
+          <span class="section-icon">
+            ◎
+          </span>
+        </div>
+        <div class="scheme-layout">
+          <form id="eligibilityForm" class="panel form-grid">
+            <label>
+              <span data-i18n="occupation">
+                Your occupation
+              </span>
+              <select id="occupation">
+                <option value="student">
+                  Student
+                </option>
+                <option value="farmer">
+                  Farmer / agricultural worker
+                </option>
+                <option value="street">
+                  Street vendor
+                </option>
+                <option value="shop">
+                  Small shop / micro-business owner
+                </option>
+                <option value="artisan">
+                  Artisan / crafts worker
+                </option>
+                <option value="freelancer">
+                  Self-employed professional / freelancer
+                </option>
+                <option value="gig">
+                  Gig / delivery / platform worker
+                </option>
+                <option value="salaried">
+                  Salaried employee
+                </option>
+                <option value="jobseeker">
+                  Unemployed / job seeker
+                </option>
+                <option value="women">
+                  Woman entrepreneur / SHG member
+                </option>
+                <option value="fisher">
+                  Fisher / livestock / dairy worker
+                </option>
+                <option value="construction">
+                  Construction / daily-wage worker
+                </option>
+                <option value="disability">
+                  Person with disability
+                </option>
+                <option value="senior">
+                  Senior citizen / pension applicant
+                </option>
+                <option value="other">
+                  Other / mixed livelihood
+                </option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="state">
+                State / UT
+              </span>
+              <select id="state" required>
+                <option value="" data-i18n="statePlaceholder">Select State / UT</option>
+                <optgroup label="States" data-i18n="statesGroup">
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Chhattisgarh</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Haryana</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Maharashtra</option>
+                  <option>Manipur</option>
+                  <option>Meghalaya</option>
+                  <option>Mizoram</option>
+                  <option>Nagaland</option>
+                  <option>Odisha</option>
+                  <option>Punjab</option>
+                  <option>Rajasthan</option>
+                  <option>Sikkim</option>
+                  <option>Tamil Nadu</option>
+                  <option>Telangana</option>
+                  <option>Tripura</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Uttarakhand</option>
+                  <option>West Bengal</option>
+                </optgroup>
+                <optgroup label="Union Territories" data-i18n="unionTerritoriesGroup">
+                  <option>Andaman and Nicobar Islands</option>
+                  <option>Chandigarh</option>
+                  <option>Dadra and Nagar Haveli and Daman and Diu</option>
+                  <option>Delhi</option>
+                  <option>Jammu and Kashmir</option>
+                  <option>Ladakh</option>
+                  <option>Lakshadweep</option>
+                  <option>Puducherry</option>
+                </optgroup>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="goal">
+                What support do you need?
+              </span>
+              <select id="goal">
+                <option value="credit">
+                  Business credit
+                </option>
+                <option value="insurance">
+                  Insurance / protection
+                </option>
+                <option value="training">
+                  Training / skills
+                </option>
+                <option value="market">
+                  Market access
+                </option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="monthlyIncome">
+                Approx. monthly income (₹)
+              </span>
+              <input id="income" type="number" min="0" placeholder="Optional">
+            </label>
+            <button class="btn primary full" data-i18n="matchButton">
+              Show possible matches →
+            </button>
+          </form>
+          <div class="panel scheme-results">
+            <h3 id="schemeResultHeading" data-i18n="possibleMatches">
+              Possible starting points
+            </h3>
+            <div id="schemeResults" class="results-list">
+              <div class="empty-state">
+                Choose your details and select “Show possible matches”.
+              </div>
+            </div>
+            <p class="fine-print" data-i18n="schemeDisclaimer">
+              Starter examples only. Check current eligibility and documents with the official scheme source before applying.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="money">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow" data-i18n="moneyTools">
+              MONEY TOOLS
+            </span>
+            <h2 data-i18n="moneyTitle">
+              Understand your transactions
+            </h2>
+            <p data-i18n="moneyIntro">
+              Import a text-based UPI statement PDF or try the sample. Analysis runs on this device using transparent rules.
+            </p>
+          </div>
+          <span class="section-icon">
+            ₹
+          </span>
+        </div>
+        <div class="money-grid">
+          <article class="panel">
+            <div class="panel-title">
+              <div>
+                <h3 data-i18n="transactionAnalyzer">
+                  Transaction analyzer
+                </h3>
+                <small data-i18n="ruleBased">
+                  Rule-based categories · editable · stored locally
+                </small>
+              </div>
+              <span>
+                ↗
+              </span>
+            </div>
+            <div class="upload-area">
+              <label class="btn light" for="pdfFile" data-i18n="uploadPdf">
+                Choose UPI statement PDF
+              </label>
+              <input id="pdfFile" type="file" accept=".pdf,application/pdf">
+              <button id="loadDemo" class="text-button" data-i18n="loadDemo">
+                Load sample data
+              </button>
+              <span id="fileMessage" class="helper">
+              </span>
+            </div>
+            <div class="summary-cards">
+              <div>
+                <small data-i18n="inflows">
+                  Money in
+                </small>
+                <strong id="inflowTotal">
+                  ₹0
+                </strong>
+              </div>
+              <div>
+                <small data-i18n="outflows">
+                  Money out
+                </small>
+                <strong id="outflowTotal">
+                  ₹0
+                </strong>
+              </div>
+              <div>
+                <small data-i18n="netFlow">
+                  Net flow
+                </small>
+                <strong id="netTotal">
+                  ₹0
+                </strong>
+              </div>
+            </div>
+            <div id="trendSummary" class="insight-box">
+              Add transactions to see a trend summary.
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="date">
+                      Date
+                    </th>
+                    <th data-i18n="description">
+                      Description
+                    </th>
+                    <th data-i18n="amountEditable">
+                      Amount (editable)
+                    </th>
+                    <th data-i18n="direction">
+                      Direction (editable)
+                    </th>
+                    <th data-i18n="category">
+                      Category (editable)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="transactionRows">
+                  <tr>
+                    <td colspan="5" class="empty-state">
+                      No transactions yet.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="panel-actions">
+              <button id="clearTransactions" class="text-button" data-i18n="clearRecords">
+                Clear records
+              </button>
+            </div>
+          </article>
+          <article class="panel scam-panel">
+            <div class="panel-title">
+              <div>
+                <h3 data-i18n="scamAssistant">
+                  Suspicious activity assistant
+                </h3>
+                <small data-i18n="explainableFlags">
+                  Explainable flags to help you review
+                </small>
+              </div>
+              <span class="shield">
+                ⌑
+              </span>
+            </div>
+            <div id="flagSummary" class="flag-summary">
+              Add or load transactions to review possible patterns.
+            </div>
+            <div id="flagsList" class="flags-list">
+            </div>
+            <div class="message-check">
+              <label for="messageText" data-i18n="checkMessage">
+                Check a suspicious message
+              </label>
+              <textarea id="messageText" rows="3" placeholder="Paste message text here. Remove personal details first.">
+              </textarea>
+              <button id="checkMessage" class="btn dark small" data-i18n="scanMessage">
+                Review message
+              </button>
+              <div id="messageFlags" class="message-flags">
+              </div>
+            </div>
+            <p class="disclaimer" data-i18n="fraudDisclaimer">
+              These are rule-based warning signs, not definitive fraud detection. Never share your UPI PIN, OTP, password, or full card details. If worried, contact your bank using its official number.
+            </p>
+          </article>
+        </div>
+        <p class="fine-print" data-i18n="pdfHelp">
+          UPI PDF import reads selectable text and infers transaction rows. Review imported entries and edit amount, direction, and category. Scanned/image-only PDFs need OCR and are not supported.
+        </p>
+      </section>
+      <section class="section" id="business">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow" data-i18n="livelihoodTools">
+              LIVELIHOOD TOOLS
+            </span>
+            <h2 data-i18n="businessTitle">
+              Keep track of what you sell
+            </h2>
+            <p data-i18n="businessIntro">
+              A practical stock, sales, and performance notebook for your kind of work.
+            </p>
+          </div>
+          <span class="section-icon">
+            ⌂
+          </span>
+        </div>
+        <div class="business-grid">
+          <article class="panel">
+            <div class="panel-title">
+              <div>
+                <h3 data-i18n="catalog">
+                  Products & services
+                </h3>
+                <small data-i18n="catalogHint">
+                  Add items once, then record sales as they happen.
+                </small>
+              </div>
+              <span>
+                ＋
+              </span>
+            </div>
+            <form id="itemForm" class="inventory-form">
+              <label>
+                <span data-i18n="occupation">
+                  Your occupation
+                </span>
+                <select id="businessOccupation">
+                  <option value="shop">
+                    Shop
+                  </option>
+                  <option value="freelancer">
+                    Freelancer
+                  </option>
+                  <option value="artisan">
+                    Artisan
+                  </option>
+                  <option value="farmer">
+                    Farmer
+                  </option>
+                </select>
+              </label>
+              <div class="form-grid compact">
+                <label>
+                  <span data-i18n="itemName">
+                    Product / service
+                  </span>
+                  <input id="itemName" required placeholder="e.g. Tomato / Logo design">
+                </label>
+                <label>
+                  <span data-i18n="unit">
+                    Unit
+                  </span>
+                  <input id="itemUnit" placeholder="kg, piece, hour" required>
+                </label>
+                <label class="stock-field">
+                  <span data-i18n="stockOnHand">
+                    Stock on hand
+                  </span>
+                  <input id="itemStock" type="number" min="0" step="any" value="0">
+                </label>
+                <label>
+                  <span data-i18n="salePrice">
+                    Sale price / unit (₹)
+                  </span>
+                  <input id="itemPrice" required type="number" min="0" step="0.01">
+                </label>
+                <label>
+                  <span data-i18n="costPerUnit">
+                    Cost / unit (₹)
+                  </span>
+                  <input id="itemCost" required type="number" min="0" step="0.01">
+                </label>
+              </div>
+              <button class="btn primary" data-i18n="addItem">
+                Add to catalog
+              </button>
+            </form>
+            <div id="inventoryList" class="inventory-list">
+              <div class="empty-state">
+                Your catalog is empty.
+              </div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-title">
+              <div>
+                <h3 data-i18n="recordSale">
+                  Record a sale
+                </h3>
+                <small data-i18n="saleHint">
+                  Revenue and gross margin update from your entries.
+                </small>
+              </div>
+              <span>
+                ↗
+              </span>
+            </div>
+            <form id="saleForm" class="sale-form">
+              <label>
+                <span data-i18n="chooseItem">
+                  Product / service
+                </span>
+                <select id="saleItem" required>
+                  <option value="">
+                    Add an item first
+                  </option>
+                </select>
+              </label>
+              <div class="form-grid compact">
+                <label>
+                  <span data-i18n="quantitySold">
+                    Quantity
+                  </span>
+                  <input id="saleQuantity" type="number" min="0.01" step="any" required>
+                </label>
+                <label>
+                  <span data-i18n="saleDate">
+                    Date
+                  </span>
+                  <input id="saleDate" type="date" required>
+                </label>
+              </div>
+              <button class="btn dark" data-i18n="saveSale">
+                Save sale
+              </button>
+            </form>
+            <div class="summary-cards business-summaries">
+              <div>
+                <small data-i18n="salesRevenue">
+                  Recorded revenue
+                </small>
+                <strong id="revenueTotal">
+                  ₹0
+                </strong>
+              </div>
+              <div>
+                <small data-i18n="grossMargin">
+                  Gross margin
+                </small>
+                <strong id="marginTotal">
+                  ₹0
+                </strong>
+              </div>
+              <div>
+                <small data-i18n="unitsSold">
+                  Units sold
+                </small>
+                <strong id="unitsTotal">
+                  0
+                </strong>
+              </div>
+            </div>
+            <div id="businessInsights" class="insight-box">
+              Add catalog items and sales to see useful observations.
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-i18n="date">
+                      Date
+                    </th>
+                    <th data-i18n="item">
+                      Item
+                    </th>
+                    <th data-i18n="quantity">
+                      Qty
+                    </th>
+                    <th data-i18n="revenue">
+                      Revenue
+                    </th>
+                    <th data-i18n="grossMargin">
+                      Gross margin
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="salesRows">
+                  <tr>
+                    <td colspan="5" class="empty-state">
+                      No sales recorded yet.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="panel-actions">
+              <button id="clearBusiness" class="text-button" data-i18n="clearRecords">
+                Clear records
+              </button>
+            </div>
+          </article>
+        </div>
+        <p class="fine-print" data-i18n="businessDisclaimer">
+          Gross margin is sales revenue minus recorded item costs; it excludes rent, wages, taxes, loan payments, spoilage, and other overhead. Suggestions use only your saved records and are not forecasts.
+        </p>
+      </section>
+    </main>
+    <section class="faq-section" id="faqs" aria-labelledby="faqTitle">
+      <div class="faq-heading">
+        <span class="eyebrow" data-i18n="faqEyebrow">QUICK ANSWERS</span>
+        <h2 id="faqTitle" data-i18n="faqTitle">Frequently asked questions</h2>
+        <p data-i18n="faqIntro">A few helpful details about using Finora.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary data-i18n="faqQ1">Who can use Finora?</summary>
+          <p data-i18n="faqA1">Finora is designed as a starting point for students, farmers, shop owners, artisans, freelancers, workers, and other livelihood profiles.</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ2">Does a scheme match mean I am eligible?</summary>
+          <p data-i18n="faqA2">No. Scheme matches and document lists are preparation aids. Confirm current eligibility and requirements with the official scheme portal or administering institution.</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ3">Does Finora connect to my bank or UPI account?</summary>
+          <p data-i18n="faqA3">No. Finora has no live bank or UPI connection. You can review a supported text-based UPI statement PDF or sample data in the browser.</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ4">What kind of statement PDF can I import?</summary>
+          <p data-i18n="faqA4">The current reader works with PDFs that contain selectable text. Scanned image-only statements are not supported. Review imported rows because formats can vary.</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ5">Are suspicious-activity flags definite proof of fraud?</summary>
+          <p data-i18n="faqA5">No. Flags are rule-based prompts to review an entry or message. They can miss issues or flag harmless activity. Verify concerns through official channels and never share PINs or OTPs.</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ6">Do livelihood suggestions predict my income?</summary>
+          <p data-i18n="faqA6">No. Suggestions use the records you enter to offer practical bookkeeping ideas. Revenue and gross margin are summaries of saved sales, not forecasts or guarantees.</p>
+        </details>
+      </div>
+    </section>
+    <footer>
+      <div class="brand">
+        <img class="brand-logo" src="finora-logo.svg" alt="">
+        <span>
+          Finora
+          <small data-i18n="footerNote">
+            Private by design. Practical by nature.
+          </small>
+        </span>
+      </div>
+      <span data-i18n="footerText">
+        A local-first prototype for financial inclusion.
+      </span>
+    </footer>
+    <aside class="help-widget" aria-label="AI help menu">
+      <section class="help-panel" id="helpPanel" aria-labelledby="helpTitle" hidden>
+        <div class="help-panel-header">
+          <span class="help-sparkle">✦</span>
+          <div>
+            <h2 id="helpTitle" data-i18n="helpTitle">AI help</h2>
+            <small data-i18n="helpSubtitle">Choose a topic to get a suggested question.</small>
+          </div>
+          <button id="helpClose" class="help-close" type="button" aria-label="Close help menu">×</button>
+        </div>
+        <div class="help-menu" aria-label="Help topics">
+          <button class="help-topic" type="button" data-topic="schemes" data-i18n="helpSchemes">Government schemes</button>
+          <button class="help-topic" type="button" data-topic="transactions" data-i18n="helpTransactions">UPI statement</button>
+          <button class="help-topic" type="button" data-topic="business" data-i18n="helpBusiness">My livelihood</button>
+          <button class="help-topic" type="button" data-topic="safety" data-i18n="helpSafety">Scam safety</button>
+        </div>
+        <p class="help-prompt" id="helpPrompt" aria-live="polite" data-i18n="helpPromptDefault">Select a topic to see a suggested question for ChatGPT.</p>
+        <div class="help-actions">
+          <button class="btn light small" id="copyHelpPrompt" type="button" data-i18n="copyPrompt" disabled>Copy suggested question</button>
+          <a class="btn primary small" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer" data-i18n="openChatGPT">Open ChatGPT ↗</a>
+        </div>
+        <p class="help-privacy" data-i18n="helpPrivacy">This opens ChatGPT separately. Finora does not send your saved records. Don’t share UPI PINs, OTPs, passwords, or account numbers.</p>
+      </section>
+      <button class="help-toggle" id="helpToggle" type="button" aria-expanded="false" aria-controls="helpPanel">
+        <span aria-hidden="true">✦</span><span data-i18n="helpButton">AI help</span>
+      </button>
+    </aside>
+    <div class="toast" id="toast" role="status">
+    </div>
+    <script type="module" src="script.js">
+    </script>
+  </body>
+</html>
