@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Finora
 
 **Support, money tools, and livelihood guidance in one place.**
@@ -50,3 +51,7 @@ Scheme links point to official portals where available, but suggestions and chec
 This is a browser-only prototype. UPI PDF contents and business records are processed in the page and stored in local storage on the device. The bundled PDF.js library is licensed under Apache 2.0; its license is in `vendor/pdfjs/LICENSE`. Do not use a shared device for sensitive records. No live UPI account or payment integration is present.
 # Decacode-project
 We the team of 3 created a webpage which will help the small scale business owners to manage their business efficiently by keeping a record of their sales and getting suggestions by AI and people who are not aware of the government schemes can find the relatable schemes and required documents as per their current income, residence status.
+=======
+# DECACODE
+We the team of 3 built a website which allows people who are unaware and people under 15 unique categories to find relevant government schemes and gather info about the required documents .Also there is atool to analyse your transactions and get alerts when system identifies any scam transaction.Also user can keep record of the sold items,loss,gain
+>>>>>>> 09addedb1a7036cfc2cd39609a3146bde1864fa2
